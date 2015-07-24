@@ -16,3 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+include_recipe 'apt'
+include_recipe 'users'
+include_recipe 'sudo'
+

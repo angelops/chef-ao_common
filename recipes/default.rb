@@ -26,3 +26,5 @@ end
 
 include_recipe 'users'
 #include_recipe 'sudo'
+
+package 'rdiff-backup'

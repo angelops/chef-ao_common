@@ -26,4 +26,7 @@ end
 
 include_recipe 'users'
 
-package 'rdiff-backup'
+node['zip_common']['default_packages'].each do |pkg|
+  package pkg
+end
+

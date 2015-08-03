@@ -1,13 +1,20 @@
 ---
 driver:
   name: vagrant
+  synced_folders:
+    - ['.', '/vagrant']
+  provider: virtualbox
+  customize:
+    memory: 1024
+    cpus: 4
+    cpuexecutioncap: 50
 
 provisioner:
   name: chef_solo
 
 platforms:
   - name: ubuntu-12.04
-  - name: centos-6.4
+  - name: centos-6.6
 
 suites:
   - name: default

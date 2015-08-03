@@ -16,8 +16,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+case node['platform']
+when 'ubuntu', 'debian'
+  include_recipe 'apt'
+when 'redhat', 'centos', 'fedora'
+  include_recipe 'yum'
+  include_recipe 'yum-epel'
+end
 
-include_recipe 'apt'
 include_recipe 'users'
 #include_recipe 'sudo'
-

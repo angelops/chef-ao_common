@@ -19,5 +19,3 @@
 
 include_recipe 'apt'
 include_recipe 'users'
-#include_recipe 'sudo'
-

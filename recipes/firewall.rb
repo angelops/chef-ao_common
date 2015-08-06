@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: zip_common
-# Recipe:: default
+# Recipe:: firewall
 #
 # Copyright (C) 2015 Justin Alan Ryan (ZipRealty / Realogy)
 #
@@ -17,21 +17,14 @@
 # limitations under the License.
 #
 
-include_recipe 'zip_common::firewall'
-
-include_recipe 'hostname'
-
 case node['platform']
-when 'ubuntu', 'debian'
-  include_recipe 'apt'
+when 'ubuntu'
+  service 'ufw' do
+    action :disable, :stop
+  end
 when 'redhat', 'centos', 'fedora'
-  include_recipe 'yum'
-  include_recipe 'yum-epel'
-end
-
-include_recipe 'users'
-
-node['zip_common']['default_packages'].each do |pkg|
-  package pkg
+  service 'firewalld' do
+    action :disable, :stop
+  end
 end
 

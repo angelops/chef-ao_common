@@ -18,10 +18,6 @@
 #
 
 case node['platform']
-when 'ubuntu'
-  service 'ufw' do
-    action [:disable, :stop]
-  end
 when 'redhat', 'centos', 'fedora'
   service 'firewalld' do
     action [:disable, :stop]

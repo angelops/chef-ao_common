@@ -17,19 +17,23 @@
 # limitations under the License.
 #
 
+
 include_recipe 'zip_common::firewall'
 
 include_recipe 'hostname'
 
 case node['platform']
-when 'ubuntu', 'debian'
+when 'ubuntu'
+  include_recipe 'apt'
+when 'debian'
+  include_recipe 'debian::backports'
   include_recipe 'apt'
 when 'redhat', 'centos', 'fedora'
   include_recipe 'yum'
   include_recipe 'yum-epel'
 end
 
-include_recipe 'users'
+include_recipe "users::sysadmins"
 
 node['zip_common']['default_packages'].each do |pkg|
   package pkg

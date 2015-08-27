@@ -35,7 +35,8 @@ end
 
 include_recipe "users::sysadmins"
 
-node['zip_common']['default_packages'].each do |pkg|
+default_packages_label = 'default_' + node['platform'] + '_packages'
+node['zip_common'][default_packages_label].each do |pkg|
   package pkg
 end
 

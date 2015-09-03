@@ -25,3 +25,8 @@ suites:
     run_list:
       - recipe[zip_common::default]
     attributes:
+      authorization:
+        sudo:
+          users:
+            - vagrant
+

@@ -1,10 +1,15 @@
 # zip_common-cookbook
 
-TODO: Enter the cookbook description here.
+This is a cookbook laying the foundation for all ZipRealty linux hosts.
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+  - CentOS 7
+  - CentOS 6
+  - Ubuntu 14.04 LTS
+  - Ubuntu 12.04 LTS
+  - Debian 8.1 Jessie
+  - Debian 7.8 Wheezy
 
 ## Attributes
 
@@ -16,10 +21,34 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['zip_common']['bacon']</tt></td>
+    <td><tt>['node_fqdn']</tt></td>
+    <td>String</td>
+    <td>Feeds the 'hostname' cookbook a value for /etc/resolv.conf 'search'</td>
+    <td><tt>"*.aur.test.ziprealty.com"</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['apt']['compile_time_update']</tt></td>
     <td>Boolean</td>
-    <td>whether to include bacon</td>
+    <td>Tells apt to update cache when the recipe is compiled.</td>
     <td><tt>true</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['zip_common']['default_centos_packages']</tt></td>
+    <td>Array</td>
+    <td>Packages to install on all CentOS systems (assumes EPEL)</td>
+    <td><tt>%w{rdiff-backup tmux iotop htop tcpdump util-linux git mosh yum-cron}</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['zip_common']['default_debian_packages']</tt></td>
+    <td>Array</td>
+    <td>Packages to install on all Debian systems</td>
+    <td><tt>%w{rdiff-backup tmux iotop htop tcpdump util-linux git mosh}</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['zip_common']['default_ubuntu_packages']</tt></td>
+    <td>Array</td>
+    <td>Packages to install on all Ubuntu systems</td>
+    <td><tt>%w{rdiff-backup tmux iotop htop tcpdump util-linux git mosh}</tt></td>
   </tr>
 </table>
 

@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: zip_common
-# Recipe:: default
+# Recipe:: chef-client 
 #
 # Copyright (C) 2015 Justin Alan Ryan (ZipRealty / Realogy)
 #
@@ -17,27 +17,5 @@
 # limitations under the License.
 #
 
-
-include_recipe 'zip_common::firewall'
-
-include_recipe 'hostname'
-
-case node['platform']
-when 'ubuntu'
-  include_recipe 'apt'
-when 'debian'
-  include_recipe 'debian::backports'
-  include_recipe 'apt'
-when 'redhat', 'centos', 'fedora'
-  include_recipe 'yum'
-  include_recipe 'yum-epel'
-end
-
-include_recipe "users::sysadmins"
-include_recipe 'sudo'
-
-default_packages_label = 'default_' + node['platform'] + '_packages'
-Array(node['zip_common'][default_packages_label]).each do |pkg|
-  package pkg
-end
+include_recipe 'chef-client::service'
 

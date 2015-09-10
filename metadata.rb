@@ -6,6 +6,16 @@ description 'Installs/Configures zip_common'
 long_description 'Installs/Configures zip_common'
 version '0.2.3-develop'
 
+%w[
+  ubuntu
+  debian
+  centos
+  redhat
+  fedora
+].each do |os|
+  supports os
+end
+
 depends 'apt'
 depends 'yum-epel'
 depends 'users'

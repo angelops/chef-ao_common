@@ -6,6 +6,7 @@ description 'Installs/Configures zip_common'
 long_description 'Installs/Configures zip_common'
 version '0.2.16'
 
+depends 'etc_environment'
 depends 'apt'
 depends 'yum-epel'
 depends 'users'

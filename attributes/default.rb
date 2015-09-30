@@ -1,7 +1,7 @@
 node.default['set_fqdn'] = '*.aur.test.ziprealty.com'
 node.default['apt']['compile_time_update'] = true
 node.default['authorization']['sudo']['users'] = %w{bootstrap}
-default['etc_environment'] = {
+node.default['etc_environment'] = {
   'HTTP_PROXY':  '10.100.6.238:3128',
   'HTTPS_PROXY': '10.100.6.238:3128',
   'http_proxy':  '10.100.6.238:3128',

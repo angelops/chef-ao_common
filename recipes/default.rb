@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-
+include_recipe 'etc_environment'
 include_recipe 'zip_common::firewall'
 
 include_recipe 'hostname'
@@ -35,6 +35,8 @@ end
 
 include_recipe "users::sysadmins"
 include_recipe 'sudo'
+
+include_recipe 'nrpe'
 
 default_packages_label = 'default_' + node['platform'] + '_packages'
 Array(node['zip_common'][default_packages_label]).each do |pkg|

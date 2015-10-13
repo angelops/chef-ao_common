@@ -1,6 +1,8 @@
 ---
 driver:
   name: vagrant
+  network:
+    - ["forwarded_port", {guest: 80, host: 8080}]
   synced_folders:
     - ['.', '/vagrant']
   provider: virtualbox
@@ -25,3 +27,8 @@ suites:
     run_list:
       - recipe[zip_common::default]
     attributes:
+      authorization:
+        sudo:
+          users:
+            - vagrant
+

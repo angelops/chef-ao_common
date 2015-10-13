@@ -15,7 +15,7 @@ provisioner:
   name: chef_solo
 
 platforms:
-  - name: centos-7.0
+  - name: centos-7.1
   - name: centos-6.6
   - name: ubuntu-14.04
   - name: ubuntu-12.04

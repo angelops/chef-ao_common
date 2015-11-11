@@ -7,6 +7,6 @@ node.default['etc_environment'] = {
   'http_proxy'  => '10.100.6.238:3128',
   'https_proxy' => '10.100.6.238:3128',
 }
-default['zip_common']['default_centos_packages'] = %w{net-tools traceroute curl vim rdiff-backup tmux iotop htop tcpdump util-linux git mosh yum-cron}
-default['zip_common']['default_ubuntu_packages'] = %w{net-tools traceroute curl runit vim rdiff-backup tmux iotop htop tcpdump util-linux git mosh}
-default['zip_common']['default_debian_packages'] = %w{net-tools traceroute curl runit vim rdiff-backup tmux iotop htop tcpdump util-linux git mosh}
+default['zip_common']['default_centos_packages'] = %w{bind-utils net-tools traceroute curl vim rdiff-backup tmux iotop htop tcpdump util-linux git mosh yum-cron}
+default['zip_common']['default_ubuntu_packages'] = %w{dnsutils net-tools traceroute curl runit vim rdiff-backup tmux iotop htop tcpdump util-linux git mosh}
+default['zip_common']['default_debian_packages'] = %w{dnsutils net-tools traceroute curl runit vim rdiff-backup tmux iotop htop tcpdump util-linux git mosh}

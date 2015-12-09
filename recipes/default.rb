@@ -18,7 +18,7 @@
 #
 
 include_recipe 'etc_environment'
-include_recipe 'sysctl'
+include_recipe 'sysctl::apply'
 include_recipe 'zip_common::firewall'
 
 include_recipe 'hostname'

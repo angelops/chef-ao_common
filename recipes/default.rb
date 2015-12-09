@@ -21,7 +21,8 @@ include_recipe 'etc_environment'
 include_recipe 'sysctl::apply'
 include_recipe 'zip_common::firewall'
 
-include_recipe 'hostname'
+# resolves own hostname to 127.0.0.1, fucks up listen ip
+#include_recipe 'hostname'
 
 case node['platform']
 when 'ubuntu'

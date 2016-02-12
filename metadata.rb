@@ -4,7 +4,7 @@ maintainer_email 'juryan@ziprealty.com'
 license 'Apache 2.0'
 description 'Installs/Configures zip_common'
 long_description 'Installs/Configures zip_common'
-version '0.2.26'
+version '0.2.27'
 
 %w[
   ubuntu

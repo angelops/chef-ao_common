@@ -4,7 +4,7 @@ maintainer_email 'juryan@ziprealty.com'
 license 'Apache 2.0'
 description 'Installs/Configures zip_common'
 long_description 'Installs/Configures zip_common'
-version '0.2.27'
+version '0.3.0'
 
 %w[
   ubuntu
@@ -27,3 +27,5 @@ depends 'nrpe'
 depends 'chef-client'
 depends 'sysctl'
 depends 'omnibus_updater'
+depends 'ganglia'
+depends 'graphite'

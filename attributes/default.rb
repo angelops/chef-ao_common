@@ -14,4 +14,4 @@ default['sysctl']['params']['net']['ipv6']['conf']['all']['disable_ipv6'] = '1'
 default[:omnibus_updater][:restart_chef_service] = true
 default['ganglia']['server_role'] = 'monitoring'
 default['ganglia']['unicast'] = true
-
+default['ganglia']['mod_path'] = '/usr/lib/ganglia/'

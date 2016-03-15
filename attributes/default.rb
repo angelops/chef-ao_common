@@ -8,10 +8,12 @@ node.default['etc_environment'] = {
   'https_proxy' => 'http://10.100.6.238:3128',
 }
 default['zip_common']['default_centos_packages'] = %w{bind-utils net-tools traceroute curl vim rdiff-backup tmux iotop htop tcpdump util-linux git mosh yum-cron}
-default['zip_common']['default_ubuntu_packages'] = %w{dnsutils net-tools traceroute curl runit vim rdiff-backup tmux iotop htop tcpdump util-linux git mosh python-virtualenv}
+default['zip_common']['default_ubuntu_packages'] = %w{dnsutils net-tools traceroute curl runit vim rdiff-backup tmux iotop htop tcpdump util-linux git mosh python-virtualenv gradle}
 default['zip_common']['default_debian_packages'] = %w{dnsutils net-tools traceroute curl runit vim rdiff-backup tmux iotop htop tcpdump util-linux git mosh python-virtualenv}
 default['sysctl']['params']['net']['ipv6']['conf']['all']['disable_ipv6'] = '1'
 default[:omnibus_updater][:restart_chef_service] = true
 default['ganglia']['server_role'] = 'monitoring'
 default['ganglia']['unicast'] = true
 default['ganglia']['mod_path'] = '/usr/lib/ganglia/'
+node.default['vmware-tools']['url'] = 'http://devops.aur.test.ziprealty.com/vmware-tools-latest.tgz'
+node.default['vmware-tools']['version'] = '9.4.0'

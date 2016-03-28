@@ -1,4 +1,4 @@
-node.default['set_fqdn'] = '*.aur.test.ziprealty.com'
+#node.default['set_fqdn'] = '*.aur.test.ziprealty.com'
 node.default['apt']['compile_time_update'] = true
 node.default['authorization']['sudo']['users'] = %w{bootstrap}
 node.default['etc_environment'] = {

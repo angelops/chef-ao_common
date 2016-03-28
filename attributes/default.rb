@@ -15,5 +15,6 @@ default[:omnibus_updater][:restart_chef_service] = true
 default['ganglia']['server_role'] = 'monitoring'
 default['ganglia']['unicast'] = true
 default['ganglia']['mod_path'] = '/usr/lib/ganglia/'
+default['ganglia']['install_method'] = 'package'
 node.default['vmware-tools']['url'] = 'http://devops.aur.test.ziprealty.com/vmware-tools-latest.tgz'
 node.default['vmware-tools']['version'] = '9.4.0'

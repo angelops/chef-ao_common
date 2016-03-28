@@ -36,8 +36,8 @@ when 'redhat', 'centos', 'fedora'
   include_recipe 'yum-epel'
 end
 
-include_recipe 'nrpe'
-include_recipe 'ganglia'
+#include_recipe 'nrpe'
+#include_recipe 'ganglia'
 
 default_packages_label = 'default_' + node['platform'] + '_packages'
 Array(node['zip_common'][default_packages_label]).each do |pkg|

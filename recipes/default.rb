@@ -36,9 +36,6 @@ when 'redhat', 'centos', 'fedora'
   include_recipe 'yum-epel'
 end
 
-include_recipe "users::sysadmins"
-include_recipe 'sudo'
-
 include_recipe 'nrpe'
 include_recipe 'ganglia'
 

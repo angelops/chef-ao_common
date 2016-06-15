@@ -4,7 +4,7 @@ maintainer_email 'juryan@ziprealty.com'
 license 'Apache 2.0'
 description 'Installs/Configures zip_common'
 long_description 'Installs/Configures zip_common'
-version '0.4.1'
+version '0.4.2'
 
 %w[
   ubuntu
@@ -18,6 +18,7 @@ end
 
 depends 'etc_environment'
 depends 'apt'
+depends 'apt_cleanup'
 depends 'yum-epel'
 depends 'users'
 depends 'sudo'

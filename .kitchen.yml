@@ -25,7 +25,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[zip_common::default]
+      - recipe[ao_common::default]
     attributes:
       authorization:
         sudo:

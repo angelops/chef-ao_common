@@ -1,4 +1,4 @@
-# zip_common-cookbook
+# ao_common-cookbook
 
 This is a cookbook laying the foundation for all ZipRealty linux hosts.
 
@@ -33,19 +33,19 @@ This is a cookbook laying the foundation for all ZipRealty linux hosts.
     <td><tt>true</tt></td>
   </tr>
   <tr>
-    <td><tt>['zip_common']['default_centos_packages']</tt></td>
+    <td><tt>['ao_common']['default_centos_packages']</tt></td>
     <td>Array</td>
     <td>Packages to install on all CentOS systems (assumes EPEL)</td>
     <td><tt>%w{rdiff-backup tmux iotop htop tcpdump util-linux git mosh yum-cron}</tt></td>
   </tr>
   <tr>
-    <td><tt>['zip_common']['default_debian_packages']</tt></td>
+    <td><tt>['ao_common']['default_debian_packages']</tt></td>
     <td>Array</td>
     <td>Packages to install on all Debian systems</td>
     <td><tt>%w{rdiff-backup tmux iotop htop tcpdump util-linux git mosh}</tt></td>
   </tr>
   <tr>
-    <td><tt>['zip_common']['default_ubuntu_packages']</tt></td>
+    <td><tt>['ao_common']['default_ubuntu_packages']</tt></td>
     <td>Array</td>
     <td>Packages to install on all Ubuntu systems</td>
     <td><tt>%w{rdiff-backup tmux iotop htop tcpdump util-linux git mosh}</tt></td>
@@ -54,14 +54,14 @@ This is a cookbook laying the foundation for all ZipRealty linux hosts.
 
 ## Usage
 
-### zip_common::default
+### ao_common::default
 
-Include `zip_common` in your node's `run_list`:
+Include `ao_common` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[zip_common::default]"
+    "recipe[ao_common::default]"
   ]
 }
 ```

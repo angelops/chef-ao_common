@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: zip_common
+# Cookbook Name:: ao_common
 # Recipe:: default
 #
 # Copyright (C) 2015 Justin Alan Ryan (ZipRealty / Realogy)
@@ -19,7 +19,7 @@
 
 include_recipe 'etc_environment'
 include_recipe 'sysctl::apply'
-include_recipe 'zip_common::firewall'
+include_recipe 'ao_common::firewall'
 include_recipe 'omnibus_updater'
 
 # resolves own hostname to 127.0.0.1, fucks up listen ip
@@ -44,7 +44,7 @@ include_recipe 'sysdig'
 #include_recipe 'ganglia'
 
 default_packages_label = 'default_' + node['platform'] + '_packages'
-Array(node['zip_common'][default_packages_label]).each do |pkg|
+Array(node['ao_common'][default_packages_label]).each do |pkg|
   package pkg
 end
 

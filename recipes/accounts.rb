@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: zip_common
+# Cookbook Name:: ao_common
 # Recipe:: accounts
 #
 # Copyright (C) 2015 Justin Alan Ryan (ZipRealty / Realogy)

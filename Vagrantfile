@@ -83,7 +83,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
 
     chef.run_list = [
-      'recipe[zip_common::default]'
+      'recipe[ao_common::default]'
     ]
   end
 end

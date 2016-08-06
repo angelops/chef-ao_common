@@ -24,7 +24,7 @@ This is a cookbook laying the foundation for all ZipRealty linux hosts.
     <td><tt>['node_fqdn']</tt></td>
     <td>String</td>
     <td>Feeds the 'hostname' cookbook a value for /etc/resolv.conf 'search'</td>
-    <td><tt>"*.aur.test.ziprealty.com"</tt></td>
+    <td><tt>"*.angelops.net"</tt></td>
   </tr>
   <tr>
     <td><tt>['apt']['compile_time_update']</tt></td>
@@ -68,4 +68,4 @@ Include `ao_common` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: Justin Alan Ryan (ZipRealty / Realogy) (<juryan@ziprealty.com>)
+Author:: Justin Alan Ryan (Angel Ops) (<justizin@angelops.net>)

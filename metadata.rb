@@ -1,6 +1,6 @@
 name 'ao_common'
 maintainer 'Justin Alan Ryan (ZipRealty / Realogy)'
-maintainer_email 'juryan@ziprealty.com'
+maintainer_email 'justizin@angelops.net'
 license 'Apache 2.0'
 description 'Installs/Configures ao_common'
 long_description 'Installs/Configures ao_common'
